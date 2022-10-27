@@ -1,23 +1,44 @@
 import logo from './logo.svg';
 import './App.css';
+import Movies from './Movies';
 
 function App() {
+  const movieList =[{
+		title:"The Godfather",
+		year:"1972",
+		genre:"Drama",
+		director:"Francis Ford Capolla"
+	},
+	{
+		title:"Superbad",
+		year:"2007",
+		genre:"Comedy",
+		director:"Greg Mottola"
+	},
+	{
+		title:"The Departed",
+		year:"2006",
+		genre:"Drama",
+		director:"Martin Scorsese"
+	},
+	{
+		title:"Saving Private Ryan",
+		year:"1998",
+		genre:"Action",
+		director:"Steven Spielberg"
+	},
+	{
+		title:"The Expendables",
+		year:"2010",
+		genre:"Action",
+		director:"Sylvester Stallone"
+	}];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {movieList.map(
+        (movieObj)=>{return(<Movies/>)}
+      )}
     </div>
   );
 }
