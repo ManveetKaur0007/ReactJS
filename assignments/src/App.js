@@ -37,7 +37,11 @@ function App() {
   return (
     <div className="App">
       {movieList.map(
-        (movieObj)=>{return(<Movies/>)}
+        (movieObj)=>{return(<Movies 
+          title={movieObj.title} 
+          year={movieObj.year} 
+          genre={movieObj.genre} 
+          director={movieObj.director}/>)}
       )}
     </div>
   );
